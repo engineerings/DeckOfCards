@@ -4,6 +4,12 @@ parameters:
 #    parameter_name: value
 
 services:
-#    service_name:
-#        class: AppBundle\Directory\ClassName
-#        arguments: ["@another_service_name", "plain_value", "%parameter_name%"]
+    game.card:
+        class:        AppBundle\Utils\Game\Card\Card
+        arguments:
+    game.deck:
+        class:        AppBundle\Utils\Game\Deck\Deck
+        arguments:
+    game.display.text:
+        class:        AppBundle\Utils\Game\Display\Type\TextDisplayer
+        arguments:

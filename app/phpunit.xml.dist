@@ -16,6 +16,9 @@
             <directory>../src/*/*Bundle/Tests</directory>
             <directory>../src/*/Bundle/*Bundle/Tests</directory>
             <directory>../src/*Bundle/Tests</directory>
+            <directory>../src/*Bundle/Tests/Controller/*</directory>
+            <directory>../src/*Bundle/Tests/Utils/Game/Card/*</directory>
+
         </testsuite>
     </testsuites>
 
@@ -35,6 +38,7 @@
                 <directory>../src/*/*Bundle/Tests</directory>
                 <directory>../src/*/Bundle/*Bundle/Resources</directory>
                 <directory>../src/*/Bundle/*Bundle/Tests</directory>
+                <directory>../src/*Bundle/Tests/Utils/Game/Card/*</directory>
             </exclude>
         </whitelist>
     </filter>

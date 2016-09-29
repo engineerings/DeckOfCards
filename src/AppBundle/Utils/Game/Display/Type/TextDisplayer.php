@@ -11,7 +11,7 @@ class TextDisplayer implements DisplayerContract
 {
 
     /**
-     * Show text card.
+     * Get card on text format.
      *
      * @param Card $card
      * @return string

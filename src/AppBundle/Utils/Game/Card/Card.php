@@ -32,20 +32,37 @@ class Card implements CardContract
     );
 
     /**
+     * @const array SUITSTRINGS
+     */
+    const SUITSTRINGS = array(
+        'spades', 'clubs', 'diamonds', 'hearts'
+    );
+
+    /**
      * Card constructor.
      *
      * @param int $suit
      * @param int $rank
+     * @throws \InvalidArgumentException
      */
     public function __construct( int $suit, int $rank )
     {
+        if (!in_array($suit, array(self::SPADES, self::CLUBS, self::DIAMONDS, self::HEARTS))) {
+            throw new \InvalidArgumentException('Bad Card Suit');
+        }
+
+        if( $rank < 0 || $rank > 11)
+        {
+            throw new \InvalidArgumentException('Bad Card Rank, enter from 0 to 11');
+        }
+
         $this->mySuit = $suit;
-        $this->myRank;
-        $this->myName = self::RANKSTRINGS(
-            $this->getRank()
+        $this->myRank = $rank;
+        $this->myName =
+            self::RANKSTRINGS[ $this->getRank() ]
             . ' of ' .
-            $this->getSuit()
-        );
+            self::SUITSTRINGS[ $this->getSuit() ];
+
     }
 
     /**
@@ -65,7 +82,7 @@ class Card implements CardContract
      */
     public function getRank() : int
     {
-        $this->myRank;
+        return $this->myRank;
     }
 
     /**

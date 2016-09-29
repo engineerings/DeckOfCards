@@ -10,22 +10,22 @@ interface CardContract
     /**
      * @const SPADES
      */
-    public const SPADES = 0;
-
-    /**
-     * @const HEARTS
-     */
-    public const HEARTS = 1;
-
-    /**
-     * @const DIAMONDS
-     */
-    public const DIAMONDS = 2;
+    const SPADES = 0;
 
     /**
      *  @const CLUBS
      */
-    public const CLUBS = 3;
+    const CLUBS = 1;
+
+    /**
+     * @const DIAMONDS
+     */
+    const DIAMONDS = 2;
+
+    /**
+     * @const HEARTS
+     */
+    const HEARTS = 3;
 
     /**
      * Get suit.

@@ -24,12 +24,10 @@ class Deck implements \Iterator
     /**
      * Deck constructor.
      * @param array $myCardList
-     * @param int $myIndex
      */
-    public function __construct(array $myCardList, $myIndex)
+    public function __construct( array $myCardList )
     {
         $this->myCardList = array();
-        $this->myIndex = 0;
 
 
         for( $suit = CardContract::SPADES; $suit <= CardContract::CLUBS; $suit++ ) {
