@@ -26,7 +26,5 @@ class TextDisplayerTest extends \PHPUnit_Framework_TestCase
             'TextDisplayer show does not correctly print cart name'
         );
 
-
-
     }
 }

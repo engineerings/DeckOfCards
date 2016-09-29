@@ -113,4 +113,26 @@ class DeckTest extends \PHPUnit_Framework_TestCase
         );
     }
 
+    /**
+     * @test
+     */
+    public function correctly_return_list_of_cards()
+    {
+        $deck_obj = new Deck();
+
+        $this->assertInternalType(
+            'array',
+            $deck_obj->getMyCardList(),
+            'Deck getMyCardList does not return list of cards'
+        );
+
+        $this->assertCount(
+            48,
+            $deck_obj->getMyCardList(),
+            'Deck getMyCardList does not return 48 objects'
+        );
+
+
+    }
+
 }

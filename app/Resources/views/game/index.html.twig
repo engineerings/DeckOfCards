@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Game homepage{% endblock %}
+
+
+
+{% block body %}
+
+    <h1>Game index</h1>
+
+    {% set cards_list = app.session.get('cards_list') %}
+
+
+
+    {#{{ dump(cards_list) }}#}
+
+{% endblock %}
+
+
+

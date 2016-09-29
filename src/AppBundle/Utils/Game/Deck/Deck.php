@@ -30,7 +30,7 @@ class Deck implements \Iterator
         $this->myCardList = array();
 
 
-        for( $suit = CardContract::SPADES; $suit <= CardContract::CLUBS; $suit++ ) {
+        for( $suit = CardContract::SPADES; $suit <= CardContract::HEARTS; $suit++ ) {
 
             for( $rank = 0; $rank <= 11; $rank++ ) {
 
@@ -81,6 +81,7 @@ class Deck implements \Iterator
 
     /**
      * Checks if current position is valid
+     *
      * @return bool|true on success or false on failure.
      */
     public function valid() : bool
@@ -90,10 +91,22 @@ class Deck implements \Iterator
 
     /**
      * Rewind the Iterator to the first element
+     *
      * @return int myIndex.
      */
     public function rewind() : int
     {
         return $this->myIndex = 0;
     }
+
+    /**
+     * Get myCardList
+     *
+     * @return array
+     */
+    public function getMyCardList() : array
+    {
+        return $this->myCardList;
+    }
+
 }
