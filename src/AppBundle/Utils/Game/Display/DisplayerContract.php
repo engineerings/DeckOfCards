@@ -12,6 +12,7 @@ interface DisplayerContract
      * Show card.
      *
      * @param Card $card
+     * @return string
      */
-    public function show( Card $card ) : void;
+    public function show( Card $card ) : string ;
 }

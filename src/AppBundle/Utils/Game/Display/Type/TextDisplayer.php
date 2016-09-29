@@ -6,6 +6,7 @@ namespace AppBundle\Utils\Game\Display\Type;
 
 
 use AppBundle\Utils\Game\Card\Card;
+use AppBundle\Utils\Game\Display\DisplayerContract;
 
 class TextDisplayer implements DisplayerContract
 {
