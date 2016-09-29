@@ -7,7 +7,6 @@ namespace AppBundle\Tests\Utils\Game\Card;
 
 use AppBundle\Utils\Game\Card\Card;
 use \ReflectionClass;
-use \PHPUnit_Framework_TestCase;
 
 class CardTest extends \PHPUnit_Framework_TestCase
 {
@@ -76,7 +75,7 @@ class CardTest extends \PHPUnit_Framework_TestCase
      */
     public function correctly_compare_cards()
     {
-        // phpunit -c app src/AppBundle/Tests/Utils
+
         $card_one = new Card( 0, 0 );
         $card_two = new Card( 0, 0 );
 

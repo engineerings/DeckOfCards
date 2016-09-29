@@ -23,16 +23,16 @@ class Deck implements \Iterator
 
     /**
      * Deck constructor.
-     * @param array $myCardList
+     * @throws \InvalidArgumentException
      */
-    public function __construct( array $myCardList )
+    public function __construct()
     {
         $this->myCardList = array();
 
 
         for( $suit = CardContract::SPADES; $suit <= CardContract::CLUBS; $suit++ ) {
 
-            for( $rank = 0; $rank <= 13; $rank++ ) {
+            for( $rank = 0; $rank <= 11; $rank++ ) {
 
                 $this->myCardList[] = new Card( $suit, $rank );
             }
@@ -59,7 +59,7 @@ class Deck implements \Iterator
     /**
      * Get the next element if exist, if not return null.
      *
-     * @return CardContract|null
+     * @return CardContract
      */
     public function next() : CardContract
     {
@@ -90,11 +90,10 @@ class Deck implements \Iterator
 
     /**
      * Rewind the Iterator to the first element
-     *
-     * @return void Any returned value is ignored.
+     * @return int myIndex.
      */
-    public function rewind() : void
+    public function rewind() : int
     {
-        $this->myIndex = 0;
+        return $this->myIndex = 0;
     }
 }
