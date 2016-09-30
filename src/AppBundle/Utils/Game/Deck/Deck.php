@@ -4,9 +4,11 @@ declare (strict_types=1);
 
 namespace AppBundle\Utils\Game\Deck;
 
+use AppBundle\Utils\Game\Card\{
+    Card,
+    CardContract
+};
 
-use AppBundle\Utils\Game\Card\Card;
-use AppBundle\Utils\Game\Card\CardContract;
 
 class Deck implements \Iterator
 {
@@ -53,7 +55,7 @@ class Deck implements \Iterator
 
     public function hasNext() : bool
     {
-        return $this->myIndex < count( $this->myCardList );
+        return $this->myIndex < ( count( $this->myCardList ) - 1 );
     }
 
     /**
@@ -108,5 +110,6 @@ class Deck implements \Iterator
     {
         return $this->myCardList;
     }
+
 
 }

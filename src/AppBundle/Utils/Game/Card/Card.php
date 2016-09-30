@@ -110,6 +110,7 @@ class Card implements CardContract
         else {
             return $rankDiff;
         }
+
     }
 }
 

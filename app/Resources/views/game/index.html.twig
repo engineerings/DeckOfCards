@@ -6,13 +6,40 @@
 
 {% block body %}
 
-    <h1>Game index</h1>
-
-    {% set cards_list = app.session.get('cards_list') %}
+    <h1>Game of cards</h1>
 
 
+    {% set deck = app.session.get( 'deck' ) %}
 
-    {#{{ dump(cards_list) }}#}
+    {% set points = app.session.get( 'points' ) %}
+
+    <p>Your card is:  <b>{{ deck.current.toString() }}</b></p>
+
+
+    <p>Your points: <b> {{ points }} </b></p>
+
+    {% if deck.hasNext() %}
+
+        <p>Try to guess if next card will be bigger or smaller ?</p>
+
+        <p>
+            <a href="{{ path('game_check', {'guess': 'smaller'}) }}">Smaller</a>
+            ||
+            <a href="{{ path('game_check', {'guess': 'bigger'}) }}">Bigger</a>
+        </p>
+
+    {% endif %}
+
+    {% if not deck.hasNext() %}
+
+        <p>NO more elements</p>
+        <p>Good Job</p>
+        <p><a href="{{ path('game_homepage') }}">Start Game</a></p>
+
+
+
+    {% endif %}
+
 
 {% endblock %}
 
